@@ -34,7 +34,14 @@ export class BestProductComponent implements OnInit {
     const x = this.productService.getProducts();
     x.snapshotChanges().subscribe(product => {
       this.bestProducts = [];
-      for (let i = 0; i < 5; i++) {
+      const limit = (product.length < 5) ? product.length : 5;
+      // let limit2;
+      // if (product.length < 5) {
+      //   limit2 = product.length;
+      // } else {
+      //   limit2 = 5;
+      // }
+      for (let i = 0; i < limit; i++) {
         const y = product[i].payload.toJSON();
         y["$key"] = product[i].key;
         this.bestProducts.push(y as Product);
