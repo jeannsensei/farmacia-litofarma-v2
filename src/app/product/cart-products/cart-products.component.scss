@@ -48,11 +48,11 @@
   .modal-dialog.cascading-modal.modal-avatar .modal-header img,
   .reply-form img,
   .testimonial-carousel .testimonial .avatar img,
-  .z-depth-2 {
-    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
-      0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+  // .z-depth-2 {
+  //   -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+  //     0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  //   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  // }
   
   .card.card-cascade .card-body {
     padding-top: 1.8rem;
@@ -109,5 +109,6 @@
     margin-left: 1rem;
     -webkit-transition: 0.4s;
     transition: 0.4s;
+    cursor: pointer;
   }
   

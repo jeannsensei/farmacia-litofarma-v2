@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from "@angular/core";
 })
 export class FilterByBrandPipe implements PipeTransform {
   transform(items: any, select?: any): any {
-    if (select !== "All") {
+    if (select !== "Mostrar todo") {
       return select
         ? items.filter(item => item["productSeller"] === select)
         : items;

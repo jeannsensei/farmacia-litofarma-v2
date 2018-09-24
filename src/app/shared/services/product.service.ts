@@ -29,7 +29,7 @@ export class ProductService {
   ) {
     // Toaster Config
     this.toastyConfig.position = "top-right";
-    this.toastyConfig.theme = "material";
+    this.toastyConfig.theme = "bootstrap";
 
     if (this.authService.isLoggedIn()) {
       this.calculateFavProductCounts();
@@ -79,20 +79,20 @@ export class ProductService {
   addFavouriteProduct(data: Product): void {
     // Toast Product Already exists
     const toastAlreadyExists: ToastOptions = {
-      title: "Product Already Added",
-      msg: "You have already added this product to favourite list",
+      title: "Producto ya agregado",
+      msg: "Ya el producto está agregado",
       showClose: true,
       timeout: 5000,
-      theme: "material"
+      theme: "bootstrap"
     };
 
     // Toaster Adding
     const toastAdd: ToastOptions = {
-      title: "Adding Product",
-      msg: "Adding Product as Favourite",
+      title: "Favoritos",
+      msg: "Agregando producto a Favoritos",
       showClose: true,
-      timeout: 5000,
-      theme: "material"
+      timeout: 1000,
+      theme: "bootstrap"
     };
 
     let a: Product[];
@@ -170,11 +170,11 @@ export class ProductService {
     a.push(data);
 
     const toastOption: ToastOptions = {
-      title: "Adding Product to Cart",
-      msg: "Product Adding to the cart",
+      title: "Carro de compras",
+      msg: "Añadiendo el producto",
       showClose: true,
       timeout: 1000,
-      theme: "material"
+      theme: "bootstrap"
     };
     this.toastyService.wait(toastOption);
     setTimeout(() => {

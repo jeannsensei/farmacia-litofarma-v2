@@ -1,8 +1,8 @@
 <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark indigo">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
   <!-- Navbar brand -->
-  <a class="navbar-brand" href="#">ikismail</a>
+  <a class="navbar-brand" [routerLink]="[ '/' ]">Farmacia Litofarma</a>
 
   <!-- Collapse button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
@@ -15,13 +15,15 @@
 
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="javascript:;;" [routerLink]="[ '/' ]">Home
-          <span class="sr-only">(current)</span>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" href="javascript:;;" [routerLink]="[ '/index' ]">
+          <i class="fa fa-home"></i>&nbsp;Inicio
+          <!-- <span class="sr-only">(current)</span> -->
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="jaascript:;;" [routerLink]="[ '/products/all-products' ]">Our Products</a>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" href="jaascript:;;" [routerLink]="[ '/products/all-products' ]">
+          <i class="fa fa-shopping-bag"></i>&nbsp;Nuestros productos</a>
       </li>
       <!-- <li class="nav-item">
         <a class="nav-link" href="#">Pricing</a>
@@ -49,23 +51,23 @@
           </a>
         </div>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="javascript:;;">
-          <i class="fa fa-envelope"></i> Contact
-          <span class="sr-only">(current)</span>
+          <i class="fa fa-envelope"></i> Contacto
+          <!-- <span class="sr-only">(current)</span> -->
         </a>
       </li>
       <li class="nav-item" *ngIf="authService.isLoggedIn()">
         <a class="nav-link" [routerLink]="['/users']">
-          <i class="fa fa-user"></i> My Account</a>
+          <i class="fa fa-user"></i> Mi cuenta</a>
       </li>
       <li class="nav-item" *ngIf="!authService.isLoggedIn()">
         <a class="nav-link" [routerLink]="[ '/index/login' ]">
-          <i class="fa fa-sign-in"></i> Signin / Signup</a>
+          <i class="fa fa-sign-in"></i> Iniciar sesión</a>
       </li>
       <li class="nav-item" *ngIf="authService.isLoggedIn()">
         <a class="nav-link" (click)="logout()">
-          <i class="fa fa-sign-in"></i>Logout</a>
+          <i class="fa fa-sign-in"></i> Cerrar Sesión</a>
       </li>
     </ul>
   </div>

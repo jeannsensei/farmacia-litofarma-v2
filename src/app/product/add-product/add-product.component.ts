@@ -26,7 +26,7 @@ export class AddProductComponent implements OnInit {
     private toastyService: ToastyService,
     private toastyConfig: ToastyConfig
   ) {
-    this.toastyConfig.theme = "material";
+    this.toastyConfig.theme = "bootstrap";
   }
 
   ngOnInit() {}

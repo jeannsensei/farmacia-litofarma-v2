@@ -12,9 +12,9 @@ import { LoaderSpinnerService } from "../../shared/loader-spinner/loader-spinner
 export class ProductListComponent implements OnInit {
   productList: Product[];
 
-  brands = ["All", "Google", "Apple", "Samsung", "OnePlus", "Lenovo", "Nokia", "Motorolla"];
+  brands = ["Mostrar todo", "Google", "Apple", "Samsung", "OnePlus", "Lenovo", "Nokia", "Motorolla"];
 
-  selectedBrand: "All";
+  selectedBrand: "Mostrar todo";
 
   page = 1;
   constructor(

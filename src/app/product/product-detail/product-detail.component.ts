@@ -40,6 +40,10 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
     });
   }
 
+  addToCart(product: Product) {
+      this.productService.addToCart(product);
+  }
+
   ngOnDestroy() {
     this.sub.unsubscribe();
   }

@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     private toastyConfig: ToastyConfig
   ) {
     this.toastyConfig.position = "top-right";
-    this.toastyConfig.theme = "material";
+    this.toastyConfig.theme = "bootstrap";
 
     this.createUser = new User();
   }
@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
           msg: "Registering",
           showClose: true,
           timeout: 3000,
-          theme: "material"
+          theme: "bootstrap"
         };
         this.toastyService.wait(toastOption);
         setTimeout((router: Router) => {
@@ -72,11 +72,11 @@ export class LoginComponent implements OnInit {
         console.log("Logged In: ", res);
 
         const toastOption: ToastOptions = {
-          title: "Authentication Success",
-          msg: "Logging in please wait",
+          title: "Autenticación exitosa",
+          msg: "Conectandose, por favor espere.",
           showClose: true,
           timeout: 5000,
-          theme: "material"
+          theme: "bootstrap"
         };
         this.toastyService.wait(toastOption);
         const returnUrl = this.route.snapshot.queryParamMap.get("returnUrl");
@@ -90,11 +90,11 @@ export class LoginComponent implements OnInit {
       .catch(err => {
         console.log("logging Error: ", err);
         const toastOption: ToastOptions = {
-          title: "Authentication Failed",
-          msg: "Invalid Credentials, Please Check your credentials",
+          title: "La autenticación falló.",
+          msg: "Verifica tu correo y contraseña.",
           showClose: true,
           timeout: 5000,
-          theme: "material"
+          theme: "bootstrap"
         };
         this.toastyService.error(toastOption);
       });
