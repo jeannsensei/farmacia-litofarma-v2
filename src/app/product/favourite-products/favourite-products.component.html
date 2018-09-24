@@ -42,10 +42,10 @@
               <div class="card-footer">
                 <span class="left">{{ product.productPrice }} $</span>
                 <span class="right">
-                  <a placement="top" mdbTooltip="Quick Look" container="body" [routerLink]="['/products/product', product.$key]">
+                  <a placement="top" mdbTooltip="Mirar producto" container="body" [routerLink]="['/products/product', product.$key]">
                     <i class="fa fa-eye"></i>
                   </a>
-                  <a placement="top" mdbTooltip="Remove Product" container="body" (click)="removeFavourite(product)">
+                  <a placement="top" mdbTooltip="Quitar producto" container="body" (click)="removeFavourite(product)">
                     <i class="fa fa-trash"></i>
                   </a>
                 </span>

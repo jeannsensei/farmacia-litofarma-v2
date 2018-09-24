@@ -1,75 +1,81 @@
 <br>
-<div class="container" *ngIf="cartProducts.length > 0">
+<div class="container-fluid mx-auto" *ngIf="cartProducts.length > 0">
   <div class="row">
-    <!-- List of Products -->
-    <div class="col-9">
+    <div class="col-md-12">
+      <!-- List of Products -->
       <div class="row">
-        <div class="col-4" *ngFor="let product of cartProducts">
-          <div class="item">
-            <div class=" mb-r">
+        <div class="col-md-4">
+          <app-cart-calculator [products]="cartProducts"></app-cart-calculator>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+          <div class="col-md-4 p-2" *ngFor="let product of cartProducts">
+            <div class="item">
+              <div class="mb-r">
 
-              <!--Card-->
-              <div class="card card-cascade wider">
+                <!--Card-->
+                <div class="card">
 
-                <!--Card image-->
-                <a [routerLink]="['/products/product', product.$key ]">
+                  <!--Card image-->
+                  <a [routerLink]="['/products/product', product.$key ]">
 
-                  <div class="view overlay hm-white-slight">
-                    <img [src]="product.productImageUrl" class="img-fluid" alt="" width="360px" height="640px">
-                    <a>
-                      <div class="mask waves-effect waves-light" RippleRadius></div>
-                    </a>
-                  </div>
-                </a>
-
-                <!--/.Card image-->
-
-                <!--Card content-->
-                <div class="card-body text-center no-padding">
-                  <!--Category & Title-->
-                  <a class="text-muted">
-                    <h5>{{ product.productCategory }}</h5>
+                    <div class="mx-auto">
+                      <img [src]="product.productImageUrl" class="img-fluid img-thumbnail rounded mx-auto" alt="">
+                      <a>
+                        <div class="mask waves-effect waves-light" RippleRadius></div>
+                      </a>
+                    </div>
                   </a>
-                  <h5 class="card-title">
-                    <strong>
-                      <a [routerLink]="['/products/product', product.$key]">{{ product.productName }}</a>
-                    </strong>
-                  </h5>
 
-                  <!--Description-->
-                  <p class="card-text">{{ product.productDescription }}
-                  </p>
+                  <!--/.Card image-->
 
-                  <!--Card footer-->
-                  <div class="card-footer">
-                    <span class="left">{{ product.productPrice }} $</span>
-                    <span class="right">
-                      <a placement="top" mdbTooltip="Quick Look" container="body" [routerLink]="['/products/product', product.$key]">
-                        <i class="fa fa-eye"></i>
-                      </a>
-                      <a placement="top" mdbTooltip="Remove Product" container="body" (click)="removeCartProduct(product)">
-                        <i class="fa fa-trash"></i>
-                      </a>
-                    </span>
+                  <!--Card content-->
+                  <div class="card-body text-center no-padding">
+                    <!--Category & Title-->
+                    <a class="text-muted">
+                      <h5>{{ product.productCategory }}</h5>
+                    </a>
+                    <h5 class="card-title">
+                      <strong>
+                        <a [routerLink]="['/products/product', product.$key]">{{ product.productName }}</a>
+                      </strong>
+                    </h5>
+
+                    <!--Description-->
+                    <p class="card-text">{{ product.productDescription }}
+                    </p>
+
+                    <!--Card footer-->
+                    <div class="card-footer">
+                      <span class="left">{{ product.productPrice }} $</span>
+                      <span class="right">
+                        <a placement="top" mdbTooltip="Mirar producto" container="body" [routerLink]="['/products/product', product.$key]">
+                          <i class="fa fa-eye"></i>
+                        </a>
+                        <a placement="top" mdbTooltip="Quitar producto" container="body" (click)="removeCartProduct(product)">
+                          <i class="fa fa-trash"></i>
+                        </a>
+                      </span>
+                    </div>
+
                   </div>
+                  <!--/.Card content-->
 
                 </div>
-                <!--/.Card content-->
-
+                <!--/.Card-->
               </div>
-              <!--/.Card-->
-
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-    </div>
-    <div class="col-3">
-      <app-cart-calculator [products]="cartProducts"></app-cart-calculator>
+
     </div>
   </div>
 </div>
+
+
 <div class="container" *ngIf="cartProducts.length === 0">
   <app-no-products-found [title]="messageTitle" [description]="messageDescription"></app-no-products-found>
 </div>
