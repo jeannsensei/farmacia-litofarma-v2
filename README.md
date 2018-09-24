@@ -1,19 +1,17 @@
 # Angular6 - ShoppingCart
 
- [![HitCount](http://hits.dwyl.io/ikismail/Angular4-ShoppingCart.svg)](http://hits.dwyl.io/ikismail/Angular4-ShoppingCart)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/ikismail/Angular-ShoppingCart/blob/master/LICENSE)
-[![npm](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://angular-shoppingcart.firebaseapp.com/)
+[![npm](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://farmacia-litofarma-94380.firebaseapp.com/)
 
-Developing a **ShoppingCart (Ecommerce) Application using Angular6**.
+Desarrollando una **Aplicación de tienda con Carro de Compras (Ecommerce) con Angular 6**.
 
-**Live Demo** : [Angular6-shopping-cart](https://angular-shoppingcart.firebaseapp.com/)
+**Demo en vivo** : [Farmacia Litofarma en Firebase](https://farmacia-litofarma-94380.firebaseapp.com/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
 
-## Functionalities
+## Funcionalidades
 
-1.  User Registration
-2.  CRUD Operations like
+1.  Registro de usuarios (falta recuperación de contraseña)
+2.  Operaciones CRUD
 
 * User can add product to his cart.
 * Admin can add product to the product list
@@ -25,10 +23,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Tools and Technologies
 
-* Technology: HTML, MDBootstrap, CSS, Angular-5, Firebase, Charts, Progressive Web Application.
-* Database : Angular Firebase.
+* Tecnologias usadas: HTML, Bootstrap, CSS, Angular-6, Firebase, Charts, Progressive Web Application.
+* Database: Firebase RealTime Database.
 
-#### This Projects covers all fundamentals of Angular
+#### Este proyecto contiene lo fundamental de Angular
 
 * Template and DataBinding
 * Form Validation
@@ -63,15 +61,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 7. Run the Server. 
 
-## Screenshots:
-
-### Home Page:
-
-![Alt text](https://github.com/ikismail/Angular-ShoppingCart/blob/master/screenshots/home.PNG "Home Page")
-
-### Products Page:
-
-![Alt text](https://github.com/ikismail/Angular-ShoppingCart/blob/master/screenshots/products.PNG "Home Page")
+//////////////////
 
 ## Development server
 
@@ -105,6 +95,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 * If you find that something's wrong with this package, you can let me know by raising an issue on the GitHub issue tracker
 
-## License
-
-* [MIT license](https://github.com/ikismail/Angular-ShoppingCart/blob/master/LICENSE)
